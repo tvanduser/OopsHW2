@@ -2,6 +2,8 @@ package middleearth.characters;
 
 public abstract class MiddleEarthCharacter {
 	
+	//branch example
+	
 	private String name;
 	private double health;
 	private double power;
