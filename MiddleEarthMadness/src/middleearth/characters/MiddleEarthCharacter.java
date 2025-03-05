@@ -1,4 +1,4 @@
-package characters;
+package middleearth.characters;
 
 public abstract class MiddleEarthCharacter {
 	
