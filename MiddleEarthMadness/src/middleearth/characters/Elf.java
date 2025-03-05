@@ -1,5 +1,5 @@
 package middleearth.characters;
 
-public class Elf {
+public class Elf extends  {
 
 }

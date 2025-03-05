@@ -49,7 +49,7 @@ public abstract class MiddleEarthCharacter {
 	
 	//---------concrete methods---------------
 	//displays character info 
-	void displayInfo() {
+	public void displayInfo() {
 		//TODO finish this thing
 	}
 	
