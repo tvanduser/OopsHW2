@@ -29,10 +29,12 @@ public class MiddleEarthApp {
 		lotr.addCharacter(randomOrc);
 		lotr.addCharacter(bombur);
 		lotr.addCharacter(legolas);
-		lotr.addCharacter(aragon);
+		lotr.addCharacter(aragon); //this triggers the array doubling in size if the array is initially set to a size of 4
 		
 		//testing display all characters
 		lotr.displayAllCharacters();
+		
+		System.out.println(lotr.getCharacter("ugly").getRace());
 		
 		//testing updating of a character, trying to switch Gandalf's power to 1000.0
 		System.out.println(lotr.updateCharacter(gandalf, "Gandalf", 100, 1000)); //seeing if it prints true/false
