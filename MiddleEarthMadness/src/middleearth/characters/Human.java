@@ -8,7 +8,7 @@ public class Human extends MiddleEarthCharacter{
 	}
 
 	@Override
-	boolean attack(MiddleEarthCharacter target) {
+	public boolean attack(MiddleEarthCharacter target) {
 		// TODO Auto-generated method stub
 		if(target instanceof Orc || target instanceof Human) {
 			return false;
@@ -27,7 +27,7 @@ public class Human extends MiddleEarthCharacter{
 	}
 
 	@Override
-	String getRace() {
+	public String getRace() {
 		// TODO Auto-generated method stub
 		return "Human";
 	}
