@@ -9,8 +9,8 @@ import middleearth.characters.MiddleEarthCharacter;
  */
 public class CharacterManager {
     //-------Fields------\\
-    private MiddleEarthCharacter[] characters; // Array to store characters
-    private int size; // The number of characters currently in the array
+    public MiddleEarthCharacter[] characters; // Array to store characters
+    public int size; // The number of characters currently in the array
     
     //------Methods------\\
     
@@ -31,7 +31,12 @@ public class CharacterManager {
         if (size == characters.length) {
             resizeArray();
         }
-        characters[size++] = c;
+        
+		characters[size] = c; 
+		size++;
+		
+		
+		
         return true;
     }
 
@@ -68,7 +73,7 @@ public class CharacterManager {
      * @return true if any of the character's details were updated, otherwise false.
      */
     public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
-        if (character == null) { 
+        if (character.equals(null)) { 
             System.err.println("Character does not exist");
             return false;
         }
@@ -100,16 +105,21 @@ public class CharacterManager {
      * @param character The character to delete.
      * @return true if the character was successfully deleted, otherwise false.
      */
-    public boolean deleteCharacter(MiddleEarthCharacter character) {
-        if (character == null) {
+    public boolean deleteCharacter(MiddleEarthCharacter character) { //TODO I want to make this easier...
+        if (character.equals(null)) {
             System.err.println("Character does not exist");
             return false;
         }
 
         for (int i = 0; i < size; i++) {
-            if (characters[i] == character) {
-                System.arraycopy(characters, i + 1, characters, i, size - i - 1);
-                characters[--size] = null;
+            if (characters[i].equals(character)) {
+            	if(characters[i].equals(size - 1)){//checking if we're deleting the last element 
+            		characters[i] = null; 
+            	}else{ 
+            		characters[i] = characters[size - 1]; 
+            		characters[size - 1] = null;
+                	size--;
+            	}
                 return true;
             }
         }
@@ -117,7 +127,25 @@ public class CharacterManager {
     }
 
 
-    //Displays the information of all characters currently in the manager.
+    public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
+	
+
+	public MiddleEarthCharacter[] getCharacters() {
+		return characters;
+	}
+
+	public void setCharacters(MiddleEarthCharacter[] characters) {
+		this.characters = characters;
+	}
+
+	//Displays the information of all characters currently in the manager.
     public void displayAllCharacters() {
         for (int i = 0; i < size; i++) {
             characters[i].displayInfo();
