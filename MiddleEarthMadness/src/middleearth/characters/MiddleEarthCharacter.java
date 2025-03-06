@@ -41,16 +41,17 @@ public abstract class MiddleEarthCharacter {
 	}
 	
 	//----------abstract methods-------------- 
-	abstract boolean attack(MiddleEarthCharacter target);
+	public abstract boolean attack(MiddleEarthCharacter target);
 
 	//returns the race of a character
-	abstract String getRace();
+	public abstract String getRace();
 	
 	
 	//---------concrete methods---------------
 	//displays character info 
 	public void displayInfo() {
 		//TODO finish this thing
+		System.out.println("Name: " + this.getName() + ", Health: " + this.getHealth() + ", Power: " + this.getPower());
 	}
 	
 	

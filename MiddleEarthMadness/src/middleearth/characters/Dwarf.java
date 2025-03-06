@@ -8,7 +8,7 @@ public class Dwarf extends MiddleEarthCharacter{
 	}
 
 	@Override
-	boolean attack(MiddleEarthCharacter target) {
+	public boolean attack(MiddleEarthCharacter target) {
 		// TODO Auto-generated method stub
 		if(target instanceof Wizard || target instanceof Dwarf) {
 			return false;
@@ -27,7 +27,7 @@ public class Dwarf extends MiddleEarthCharacter{
 	}
 
 	@Override
-	String getRace() {
+	public String getRace() {
 		// TODO Auto-generated method stub
 		return "Dwarf";
 	}

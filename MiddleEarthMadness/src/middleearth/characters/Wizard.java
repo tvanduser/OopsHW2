@@ -8,7 +8,8 @@ public class Wizard extends MiddleEarthCharacter{
 	}
 
 	@Override
-	boolean attack(MiddleEarthCharacter target) {
+	
+public boolean attack(MiddleEarthCharacter target) {
 		// TODO Auto-generated method stub
 		if(target instanceof Human || target instanceof Wizard) {
 			return false;
@@ -27,7 +28,7 @@ public class Wizard extends MiddleEarthCharacter{
 	}
 
 	@Override
-	String getRace() {
+	public String getRace() {
 		// TODO Auto-generated method stub
 		return "Wizard";
 	}
