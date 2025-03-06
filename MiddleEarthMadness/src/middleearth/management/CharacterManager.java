@@ -16,7 +16,7 @@ public class CharacterManager {
     
     //Constructs a new CharacterManager with the initial array size
     public CharacterManager() {
-        this.characters = new MiddleEarthCharacter[20]; ///starting with 20
+        this.characters = new MiddleEarthCharacter[4]; ///starting with 20
         this.size = 0;
     }
 
